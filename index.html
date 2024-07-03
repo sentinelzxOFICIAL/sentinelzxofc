@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Rede Social</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d0d0d;
+            font-family: 'Roboto Mono', monospace;
+            color: #0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(0, 255, 0, 0.3), rgba(0, 0, 0, 0.7));
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+            backdrop-filter: blur(5px);
+            border: 1px solid #0f0;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px auto;
+            border: 3px solid #0f0;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+            cursor: pointer;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: auto;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            transition: transform 1s ease-in-out;
+        }
+
+        .social-icon {
+            text-align: center;
+            transition: transform 0.3s, color 0.3s;
+            animation: pulse 2s infinite;
+            margin: 10px;
+        }
+
+        .social-icon img {
+            width: 60px;
+            height: 60px;
+            transition: filter 0.3s;
+        }
+
+        .social-icon p {
+            margin: 10px 0 0 0;
+            color: #0f0;
+            transition: color 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+            animation: none;
+        }
+
+        .social-icon:hover img {
+            filter: brightness(1.5);
+        }
+
+        .social-icon:hover p {
+            color: #ff0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .hacker-mode {
+            background: linear-gradient(135deg, rgba(0, 255, 0, 0.6), rgba(0, 0, 0, 0.9));
+            box-shadow: 0 0 50px rgba(0, 255, 0, 0.7);
+            animation: glitch 1s infinite;
+        }
+
+        .social-icons.hacker-mode {
+            animation: moveIcons 1s infinite alternate;
+        }
+
+        @keyframes glitch {
+            0%, 100% {
+                transform: skew(0deg);
+            }
+            50% {
+                transform: skew(5deg);
+            }
+        }
+
+        @keyframes moveIcons {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <div class="profile-pic" id="profilePic">
+            <img src="imagens/perfil.png" alt="Foto de Perfil">
+        </div>
+        <div class="social-icons" id="socialIcons">
+            <div class="social-icon">
+                <a href="https://www.instagram.com/sentinelzxofc?igsh=aTR5OWFxb3gxaHNu" target="_blank" rel="noopener noreferrer">
+                    <img src="imagens/instagram.png" alt="Instagram">
+                </a>
+                <p>Instagram</p>
+            </div>
+            <div class="social-icon">
+                <a href="https://github.com/sentinelzxofc" target="_blank" rel="noopener noreferrer">
+                    <img src="imagens/github.png" alt="GitHub">
+                </a>
+                <p>GitHub</p>
+            </div>
+            <div class="social-icon">
+                <a href="https://wa.me/5591982172755" target="_blank" rel="noopener noreferrer">
+                    <img src="imagens/WhatsApp.png" alt="WhatsApp">
+                </a>
+                <p>WhatsApp</p>
+            </div>
+            <div class="social-icon">
+                <a href="https://t.me/FB_HCKERZX" target="_blank" rel="noopener noreferrer">
+                    <img src="imagens/telegram.png" alt="Telegram">
+                </a>
+                <p>Telegram</p>
+            </div>
+        </div>
+    </div>
+    <audio id="backgroundMusic" src="1musica.mp3"></audio>
+    <script src="telarede.js"></script>
+</body>
+</html>
